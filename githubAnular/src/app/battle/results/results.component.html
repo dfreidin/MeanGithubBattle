@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col">
+    <div class="winner">
+      <h2>1st Place</h2>
+      <h4>{{ players[0].username }} (Score: {{ players[0].score }})</h4>
+    </div>
+    <div class="loser">
+      <h2>2nd Place</h2>
+      <h4>{{ players[1].username }} (Score: {{ players[1].score }})</h4>
+    </div>
+  </div>
+  <div class="col">
+    <img [src]="players[0].img_url">
+    <h4>{{ players[0].username }}</h4>
+  </div>
+</div>
+<button class="btn btn-secondary" [routerLink]="['/']">Reset</button>

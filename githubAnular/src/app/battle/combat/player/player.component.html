@@ -1,0 +1,11 @@
+<div *ngIf="user">
+  <p><img [src]="user['avatar_url']"></p>
+  <p>{{ user["login"] }}</p>
+</div>
+<div *ngIf="!user">
+  <h2>Player {{ player_num }}</h2>
+  <form (submit)="getGithubUser()">
+    <p>Github Username: <input type="text" name="username" [(ngModel)]="username"></p>
+    <p><input type="submit" value="Get User" class="btn btn-primary"></p>
+  </form>
+</div>

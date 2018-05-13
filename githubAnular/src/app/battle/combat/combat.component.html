@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col">
+    <app-player [player_num]="1" (userEmitter)="dataFromPlayer1($event)"></app-player>
+  </div>
+  <div class="col">
+    <app-player [player_num]="2" (userEmitter)="dataFromPlayer2($event)"></app-player>
+  </div>
+</div>
+<p *ngIf="player1 && player2"><button (click)="calcScores()">BATTLE!</button></p>
